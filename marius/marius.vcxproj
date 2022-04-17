@@ -42,8 +42,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\opencv\opencv\build\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\opencv\opencv\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\opencv\build\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\opencv\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -82,6 +82,25 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <CudaCompile Include="kernel.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="marius.aps" />
+    <None Include="opencv_world455.dll" />
+    <None Include="opencv_world455d.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="marius.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="test.jpeg" />
+    <Image Include="thisisdog.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
