@@ -18,6 +18,8 @@
   <ItemGroup>
     <Image Include="test.jpeg" />
     <Image Include="thisisdog.jpeg" />
+    <Image Include="C:\Users\iorda\Downloads\poza1.jpeg" />
+    <Image Include="C:\Users\iorda\Downloads\poza2.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="utils.cpp" />
