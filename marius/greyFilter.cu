@@ -27,5 +27,8 @@ cudaError filters::greyFilterRunner(int blocks, int threads, utils::byte* image,
 
 	cudaMemcpy(newImage, newImage_d, size * sizeof(utils::byte), cudaMemcpyDeviceToHost);
 
+	cudaFree(&originalImage);
+	cudaFree(&newImage_d);
+
 	return cudaGetLastError();
 };
