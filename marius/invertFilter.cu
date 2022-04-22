@@ -28,9 +28,6 @@ cudaError filters::invertFilterRunner(int blocks, int threads, utils::byte* orig
 
 	cudaMemcpy(newImg, newImage_d, size * sizeof(utils::byte), cudaMemcpyDeviceToHost);
 
-	cudaFree(&originalImg_d);
-	cudaFree(&newImage_d);
-
 	return cudaGetLastError();
 
 }

@@ -41,9 +41,5 @@ cudaError filters::sobelFilterRunner(int blocks, int threads, utils::byte* origi
 
 	cudaMemcpy(filterResult_h, filterResult_d, size * sizeof(utils::byte), cudaMemcpyDeviceToHost);
 
-	cudaFree(&original_d);
-	cudaFree(&filterResult_d);
-
-
 	return cudaGetLastError();
 }

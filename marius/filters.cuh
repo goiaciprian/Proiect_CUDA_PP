@@ -10,7 +10,7 @@
 
 
 namespace filters{
-	__global__ void greyFilterKernel(utils::byte* img, utils::byte *newImage, int size);
+	__global__ void greyFilterKernel(utils::byte* img, utils::byte *newImage);
 	cudaError greyFilterRunner(int blocks, int threads, utils::byte* image, utils::byte* newImage, int size);
 
 	__global__ void invertFilterKernel(utils::byte* img, utils::byte* newImg, int size);

@@ -10,4 +10,6 @@ namespace utils {
 	byte* matToBytes(cv::Mat& image);
 	
 	cv::Mat bytesToMat(byte* bytes, int width, int height, int CVTYPE);
+
+	byte* ch3toCh1(byte* bytes, int sizeGrey, int size);
 }
