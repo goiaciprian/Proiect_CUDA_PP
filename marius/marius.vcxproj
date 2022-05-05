@@ -86,6 +86,7 @@
     </CudaCompile>
     <CudaCompile Include="invertFilter.cu" />
     <CudaCompile Include="kernel.cu" />
+    <CudaCompile Include="sepiaFilter.cu" />
     <CudaCompile Include="sobelFilter.cu" />
   </ItemGroup>
   <ItemGroup>
@@ -100,12 +101,6 @@
     <ClInclude Include="filters.cuh" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="utils.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="C:\Users\iorda\Downloads\poza1.jpeg" />
-    <Image Include="C:\Users\iorda\Downloads\poza2.jpeg" />
-    <Image Include="test.jpeg" />
-    <Image Include="thisisdog.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="utils.cpp" />

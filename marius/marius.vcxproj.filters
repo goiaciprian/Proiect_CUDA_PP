@@ -5,6 +5,7 @@
     <CudaCompile Include="greyFilter.cu" />
     <CudaCompile Include="invertFilter.cu" />
     <CudaCompile Include="sobelFilter.cu" />
+    <CudaCompile Include="sepiaFilter.cu" />
   </ItemGroup>
   <ItemGroup>
     <None Include="marius.aps" />
@@ -18,12 +19,6 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="utils.h" />
     <ClInclude Include="filters.cuh" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="test.jpeg" />
-    <Image Include="thisisdog.jpeg" />
-    <Image Include="C:\Users\iorda\Downloads\poza1.jpeg" />
-    <Image Include="C:\Users\iorda\Downloads\poza2.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="utils.cpp" />

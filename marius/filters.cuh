@@ -19,4 +19,7 @@ namespace filters{
 	__global__ void sobelFilterKernel(utils::byte* original, utils::byte* filterResult, int size, unsigned int width, unsigned int height);
 	cudaError  sobelFilterRunner(int blocks, int threads, utils::byte* original, utils::byte* filterResult, int size, unsigned int width, unsigned int height);
 
+
+	__global__ void sepiaFilterKernel(utils::byte* original, utils::byte* filterResult, int size);
+	cudaError sepiaFilterRunner(int blocks, int threads, utils::byte* original, utils::byte* filterResult, int size);
 }
