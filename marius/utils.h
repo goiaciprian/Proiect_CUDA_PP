@@ -5,6 +5,11 @@
 #include <opencv2/highgui.hpp>
 
 namespace utils {
-	uint8_t* matToBytes(cv::Mat& image);
-	cv::Mat bytesToMat(uint8_t* bytes, int width, int height);
+	typedef unsigned char byte;
+
+	byte* matToBytes(cv::Mat& image);
+	
+	cv::Mat bytesToMat(byte* bytes, int width, int height, int CVTYPE);
+
+	byte* ch3toCh1(byte* bytes, int sizeGrey, int size);
 }

@@ -1,18 +1,21 @@
-
-#include <opencv2/core.hpp>
-#include <opencv2/imgcodecs.hpp>
-#include <opencv2/highgui.hpp>
-
 #include "utils.h"
 
-uint8_t * utils::matToBytes(cv::Mat& image) {
+utils::byte* utils::matToBytes(cv::Mat& image) {
 	int size = image.total() * image.elemSize();
-	uint8_t* bytes = new uint8_t[size];
-	std::memcpy(bytes, image.data, size * sizeof(uint8_t));
+	utils::byte* bytes = new utils::byte[size];
+	std::memcpy(bytes, image.data, size * sizeof(utils::byte));
 	return bytes;
-}
+};
 
-cv::Mat utils::bytesToMat(uint8_t* bytes, int width, int heigth) {
-	cv::Mat image = cv::Mat(heigth, width, CV_8UC3, bytes).clone();
+cv::Mat utils::bytesToMat(utils::byte* bytes, int width, int height, int CVTYPE) {
+	cv::Mat image = cv::Mat(height, width, CVTYPE,  bytes).clone();
 	return image;
+};
+
+utils::byte* utils::ch3toCh1(utils::byte* bytes, int sizeGrey, int size) {
+	utils::byte* ch1Arr = new utils::byte[sizeGrey];
+	for (int i = 0, j = 0; i < size; i += 3, j++) {
+		ch1Arr[j] = bytes[i];
+	}
+	return ch1Arr;
 }

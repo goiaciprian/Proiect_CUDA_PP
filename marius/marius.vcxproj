@@ -81,7 +81,13 @@
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <CudaCompile Include="greyFilter.cu">
+      <GenerateRelocatableDeviceCode Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateRelocatableDeviceCode>
+    </CudaCompile>
+    <CudaCompile Include="invertFilter.cu" />
     <CudaCompile Include="kernel.cu" />
+    <CudaCompile Include="sepiaFilter.cu" />
+    <CudaCompile Include="sobelFilter.cu" />
   </ItemGroup>
   <ItemGroup>
     <None Include="marius.aps" />
@@ -92,12 +98,9 @@
     <ResourceCompile Include="marius.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="filters.cuh" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="utils.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="test.jpeg" />
-    <Image Include="thisisdog.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="utils.cpp" />
